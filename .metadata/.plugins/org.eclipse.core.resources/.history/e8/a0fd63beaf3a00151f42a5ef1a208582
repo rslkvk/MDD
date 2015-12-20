@@ -1,0 +1,86 @@
+
+/*
+ * 
+ */
+package hochschuleemf.diagram.part;
+
+/**
+ * @generated
+ */
+public class HochschuleemfPaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createObjects1Group());
+paletteRoot.add(createConnections2Group());
+	}
+
+	/**
+ * Creates "Objects" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createObjects1Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(hochschuleemf.diagram.part.Messages.Objects1Group_title);
+				 paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
+								paletteContainer.add(createFachbereich1CreationTool());
+paletteContainer.add(createStudiengang2CreationTool());
+		return paletteContainer;
+	}
+	/**
+ * Creates "Connections" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createConnections2Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(hochschuleemf.diagram.part.Messages.Connections2Group_title);
+				 paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
+								paletteContainer.add(createFachbereich1CreationTool());
+paletteContainer.add(createStudiengang2CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createFachbereich1CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(hochschuleemf.diagram.part.Messages.Fachbereich1CreationTool_title, hochschuleemf.diagram.part.Messages.Fachbereich1CreationTool_desc, java.util.Collections.singletonList(hochschuleemf.diagram.providers.HochschuleemfElementTypes.Fachbereich_2001));
+				 entry.setId("createFachbereich1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(hochschuleemf.diagram.providers.HochschuleemfElementTypes.getImageDescriptor(hochschuleemf.diagram.providers.HochschuleemfElementTypes.Fachbereich_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createStudiengang2CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(hochschuleemf.diagram.part.Messages.Studiengang2CreationTool_title, hochschuleemf.diagram.part.Messages.Studiengang2CreationTool_desc, java.util.Collections.singletonList(hochschuleemf.diagram.providers.HochschuleemfElementTypes.Studiengang_3001));
+				 entry.setId("createStudiengang2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(hochschuleemf.diagram.providers.HochschuleemfElementTypes.getImageDescriptor(hochschuleemf.diagram.providers.HochschuleemfElementTypes.Studiengang_3001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createFachbereich1CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(hochschuleemf.diagram.part.Messages.Fachbereich1CreationTool_title, hochschuleemf.diagram.part.Messages.Fachbereich1CreationTool_desc, java.util.Collections.singletonList(hochschuleemf.diagram.providers.HochschuleemfElementTypes.HochschuleFachbereich_4001));
+				 entry.setId("createFachbereich1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(hochschuleemf.diagram.providers.HochschuleemfElementTypes.getImageDescriptor(hochschuleemf.diagram.providers.HochschuleemfElementTypes.HochschuleFachbereich_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createStudiengang2CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(hochschuleemf.diagram.part.Messages.Studiengang2CreationTool_title, hochschuleemf.diagram.part.Messages.Studiengang2CreationTool_desc, java.util.Collections.singletonList(hochschuleemf.diagram.providers.HochschuleemfElementTypes.FachbereichStudiengang_4002));
+				 entry.setId("createStudiengang2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(hochschuleemf.diagram.providers.HochschuleemfElementTypes.getImageDescriptor(hochschuleemf.diagram.providers.HochschuleemfElementTypes.FachbereichStudiengang_4002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+
+
+		
+}

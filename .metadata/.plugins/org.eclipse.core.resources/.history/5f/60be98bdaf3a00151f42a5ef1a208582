@@ -1,0 +1,35 @@
+	/*
+ * 
+ */
+package hochschuleemf.diagram.edit.policies;
+
+/**
+ * @generated
+ */
+public class HochschuleFachbereichItemSemanticEditPolicy extends hochschuleemf.diagram.edit.policies.HochschuleemfBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public HochschuleFachbereichItemSemanticEditPolicy() {
+				super(hochschuleemf.diagram.providers.HochschuleemfElementTypes.HochschuleFachbereich_4001);
+	}
+
+			/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getDestroyReferenceCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest req) {
+		return getGEFWrapper(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand(req) {
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult doExecuteWithResult(org.eclipse.core.runtime.IProgressMonitor progressMonitor, org.eclipse.core.runtime.IAdaptable info) throws org.eclipse.core.commands.ExecutionException {
+		org.eclipse.emf.ecore.EObject referencedObject = getReferencedObject();
+		org.eclipse.emf.ecore.resource.Resource resource = referencedObject.eResource();
+		org.eclipse.gmf.runtime.common.core.command.CommandResult result = super.doExecuteWithResult(progressMonitor, info);
+		if (resource != null) {
+			resource.getContents().add(referencedObject);
+		}
+		return result;
+	}
+});
+	}
+		
+	}

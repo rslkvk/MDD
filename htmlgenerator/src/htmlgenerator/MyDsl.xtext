@@ -1,0 +1,44 @@
+grammar htmlgenerator.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.MyDsl.htmlgenerator"
+
+Model:
+"Model" "{"
+	"Form"model+=Form ("," form+=Form)*
+"}"
+;
+
+Form:
+"{" 
+	"Name"name=STRING
+	"Description"description=STRING
+	"Title"title=STRING
+	"Field"form+=Field ("," form+=Field)*
+"}"
+;
+
+Field:
+	("{" 
+	"Name"name=ID
+	"Label"label=STRING
+	"}")
+	| TextField 
+
+;
+
+TextField:
+"TextField" 
+	("{" 
+	"Name" name=ID
+	"Label"label=STRING
+	"}")
+	| MultilineField
+
+;
+
+MultilineField: 
+"MultilineField" "{"
+	"Name"name=ID 
+	"Label"label=STRING
+"}"
+;

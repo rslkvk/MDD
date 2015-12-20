@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+<extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated hochschuleViewModel -->
+      <!-- <package
+            uri="http://www.example.org/hochschule"
+            class="hochschule.HochschuleViewModelPackage"
+            genModel="model/hochschuleViewModel.genmodel"/>
+   </extension>
+-->
+
+<plugin>
+
+   <extension 
+   		id="product"
+        point="org.eclipse.core.runtime.products">
+        
+	      <package
+	            uri="http://www.example.org/hochschule"
+	            class="hochschule.HochschuleViewModelPackage"
+	            genModel="model/hochschuleViewModel.genmodel"/>
+   
+    <product
+            name="Hochschule Sample e4 Product"
+            application="org.eclipse.e4.ui.workbench.swt.E4Application">
+         <property
+               name="appName"
+               value="Hochschule Sample e4 Product">
+         </property>
+   
+      </product>
+   
+   </extension>
+
+</plugin>

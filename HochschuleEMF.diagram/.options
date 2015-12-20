@@ -1,0 +1,7 @@
+# Tracing options for the HochschuleEMF.diagram plug-in
+
+# Common issues
+HochschuleEMF.diagram/debug=false
+
+# Visual IDs
+HochschuleEMF.diagram/debug/visualID=false

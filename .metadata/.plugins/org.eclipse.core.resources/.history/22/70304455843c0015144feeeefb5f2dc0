@@ -1,0 +1,55 @@
+ 
+package HochschuleViewModel.application;
+
+import javax.annotation.PostConstruct;
+import javax.inject.Inject;
+
+import org.eclipse.jface.layout.GridDataFactory;
+import org.eclipse.jface.layout.GridLayoutFactory;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Composite;
+
+public class SWTView {
+	@Inject
+	public SWTView() {
+		
+	}
+	
+	@PostConstruct
+	public void postConstruct(Composite parent) {
+		
+	}
+	
+	private EObject getDummyEObject() {
+		// Replace this with your own model EClass to test the application with a custom model
+		final EClass eClass = TaskPackage.eINSTANCE.getUser();
+		return EcoreUtil.create(eClass);
+	}
+
+	/**
+	 * Render the editor.
+	 *
+	 * @param parent the {@link Composite} to render to
+	 */
+	@PostConstruct
+	public void createComposite(Composite parent) {
+		final EObject dummyObject = getDummyEObject();
+		try {
+			final Composite content = new Composite(parent, SWT.NONE);
+			content.setBackground(parent.getDisplay().getSystemColor(SWT.COLOR_WHITE));
+			content.setLayout(GridLayoutFactory.fillDefaults().margins(10, 10).create());
+			content.setLayoutData(GridDataFactory.fillDefaults().create());
+
+			final ViewModelContext vmc = ViewModelContextFactory.INSTANCE.createViewModelContext(
+				ViewProviderHelper.getView(dummyObject, null), dummyObject, new DefaultReferenceService());
+
+			ECPSWTViewRenderer.INSTANCE.render(content, vmc);
+			content.layout();
+		} catch (final ECPRendererException e) {
+			e.printStackTrace();
+		}
+		parent.layout();
+	}
+	
+	
+}

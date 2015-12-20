@@ -1,0 +1,21 @@
+/*
+ * 
+ */
+package hochschuleemf.diagram.providers;
+
+/**
+ * @generated
+ */
+public class HochschuleemfEditPartProvider extends org.eclipse.gmf.tooling.runtime.providers.DefaultEditPartProvider {
+
+	
+	/**
+ * @generated
+ */
+	public HochschuleemfEditPartProvider() {
+		super(new hochschuleemf.diagram.edit.parts.HochschuleemfEditPartFactory(), 			hochschuleemf.diagram.part.HochschuleemfVisualIDRegistry.TYPED_INSTANCE, 			hochschuleemf.diagram.edit.parts.HochschuleEditPart.MODEL_ID			
+		);
+	}
+
+
+	}

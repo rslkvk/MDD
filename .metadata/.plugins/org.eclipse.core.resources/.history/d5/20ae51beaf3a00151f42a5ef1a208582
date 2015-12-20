@@ -1,0 +1,30 @@
+/*
+ * 
+ */
+package hochschuleemf.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPreferenceInitializer extends org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer {
+
+	/**
+ * @generated
+ */
+	public void initializeDefaultPreferences() {
+		org.eclipse.jface.preference.IPreferenceStore store = getPreferenceStore();
+		hochschuleemf.diagram.preferences.DiagramGeneralPreferencePage.initDefaults(store);
+hochschuleemf.diagram.preferences.DiagramAppearancePreferencePage.initDefaults(store);
+hochschuleemf.diagram.preferences.DiagramConnectionsPreferencePage.initDefaults(store);
+hochschuleemf.diagram.preferences.DiagramPrintingPreferencePage.initDefaults(store);
+hochschuleemf.diagram.preferences.DiagramRulersAndGridPreferencePage.initDefaults(store);
+
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.jface.preference.IPreferenceStore getPreferenceStore() {
+		return hochschuleemf.diagram.part.HochschuleemfDiagramEditorPlugin.getInstance().getPreferenceStore();
+	}
+} 

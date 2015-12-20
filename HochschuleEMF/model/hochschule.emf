@@ -1,0 +1,65 @@
+@namespace(uri="http://www.example.org/hochschule", prefix="hochschule")
+@gmf
+package hochschuleemf;
+
+@gmf.diagram
+class Hochschule {
+  @gmf.compartment
+  val Fachbereich[+] fachbereich;
+  attr String Name;
+  val Student[+] student;
+}
+
+@gmf.node(label="Name")
+class Fachbereich {
+  @gmf.compartment
+  val Studiengang[+] studiengang;
+  ref Vorlesung[*] vorlesung;
+  val Dozent[+] dozent;
+  attr String Name;
+  attr String Alias;
+}
+
+@gmf.node(label="Name")
+class Studiengang {
+  val Vorlesung[+] vorlesung;
+  attr String Name;
+  attr String NC;
+  ref Student[+] student;
+}
+
+class Vorlesung {
+  ref Student[+] tutor;
+  val Evaluation[+] evaluation;
+  ref Dozent[1]#vorlesung dozent;
+  attr String Name;
+  attr String ModulNr;
+  attr String Beschreibung;
+  attr String CrP;
+  ref Student[5..*]#vorlesung student;
+}
+
+class Dozent {
+  ref Vorlesung[+]#dozent vorlesung;
+  id attr String PersonalNr;
+  attr String Vorname;
+  attr String Nachname;
+}
+
+class Lehrbeauftragter extends Dozent {
+}
+
+class Professor extends Dozent {
+}
+
+class Student {
+  id attr String MatrikelNr;
+  attr String Vorname;
+  attr String Nachname;
+  ref Vorlesung[*]#student vorlesung;
+}
+
+class Evaluation {
+  attr int Gesamtnote;
+}
+

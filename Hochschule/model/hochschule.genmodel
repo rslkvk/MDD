@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/Hochschule/src" modelPluginID="Hochschule"
+    modelName="Hochschule" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>hochschule.ecore</foreignModel>
+  <genPackages prefix="Hochschule" disposableProviderFactory="true" ecorePackage="hochschule.ecore#/">
+    <genClasses ecoreClass="hochschule.ecore#//Hochschule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hochschule.ecore#//Hochschule/fachbereich"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Hochschule/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hochschule.ecore#//Hochschule/student"/>
+    </genClasses>
+    <genClasses ecoreClass="hochschule.ecore#//Fachbereich">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hochschule.ecore#//Fachbereich/studiengang"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hochschule.ecore#//Fachbereich/vorlesung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hochschule.ecore#//Fachbereich/dozent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Fachbereich/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Fachbereich/Alias"/>
+    </genClasses>
+    <genClasses ecoreClass="hochschule.ecore#//Studiengang">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hochschule.ecore#//Studiengang/vorlesung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Studiengang/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Studiengang/NC"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hochschule.ecore#//Studiengang/student"/>
+    </genClasses>
+    <genClasses ecoreClass="hochschule.ecore#//Vorlesung">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hochschule.ecore#//Vorlesung/tutor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hochschule.ecore#//Vorlesung/evaluation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hochschule.ecore#//Vorlesung/dozent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Vorlesung/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Vorlesung/ModulNr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Vorlesung/Beschreibung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Vorlesung/CrP"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hochschule.ecore#//Vorlesung/student"/>
+    </genClasses>
+    <genClasses ecoreClass="hochschule.ecore#//Dozent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hochschule.ecore#//Dozent/vorlesung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Dozent/PersonalNr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Dozent/Vorname"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Dozent/Nachname"/>
+    </genClasses>
+    <genClasses ecoreClass="hochschule.ecore#//Lehrbeauftragter"/>
+    <genClasses ecoreClass="hochschule.ecore#//Professor"/>
+    <genClasses ecoreClass="hochschule.ecore#//Student">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Student/MatrikelNr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Student/Vorname"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Student/Nachname"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hochschule.ecore#//Student/vorlesung"/>
+    </genClasses>
+    <genClasses ecoreClass="hochschule.ecore#//Evaluation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hochschule.ecore#//Evaluation/Gesamtnote"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

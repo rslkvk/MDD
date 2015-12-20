@@ -1,0 +1,18 @@
+/*
+ * 
+ */
+package hochschuleemf.diagram.providers;
+
+/**
+ * @generated
+ */
+public class HochschuleemfIconProvider extends org.eclipse.gmf.tooling.runtime.providers.DefaultElementTypeIconProvider implements org.eclipse.gmf.runtime.common.ui.services.icon.IIconProvider {
+
+		/**
+ * @generated
+ */
+	public HochschuleemfIconProvider() {
+		super(hochschuleemf.diagram.providers.HochschuleemfElementTypes.TYPED_INSTANCE);
+	}
+
+	}

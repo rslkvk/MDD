@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="hochschuleemf" nsURI="http://www.example.org/hochschule" nsPrefix="hochschule">
+  <eAnnotations source="gmf"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Hochschule">
+    <eAnnotations source="gmf.diagram"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fachbereich" lowerBound="1"
+        upperBound="-1" eType="#//Fachbereich" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="student" lowerBound="1"
+        upperBound="-1" eType="#//Student" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fachbereich">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Name"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="studiengang" lowerBound="1"
+        upperBound="-1" eType="#//Studiengang" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vorlesung" upperBound="-1"
+        eType="#//Vorlesung"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dozent" lowerBound="1"
+        upperBound="-1" eType="#//Dozent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Alias" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Studiengang">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="Name"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vorlesung" lowerBound="1"
+        upperBound="-1" eType="#//Vorlesung" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NC" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="student" lowerBound="1"
+        upperBound="-1" eType="#//Student"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vorlesung">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tutor" lowerBound="1" upperBound="-1"
+        eType="#//Student"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="evaluation" lowerBound="1"
+        upperBound="-1" eType="#//Evaluation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dozent" lowerBound="1"
+        eType="#//Dozent" eOpposite="#//Dozent/vorlesung"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ModulNr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Beschreibung" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CrP" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="student" lowerBound="5"
+        upperBound="-1" eType="#//Student" eOpposite="#//Student/vorlesung"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dozent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vorlesung" lowerBound="1"
+        upperBound="-1" eType="#//Vorlesung" eOpposite="#//Vorlesung/dozent"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PersonalNr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Vorname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Nachname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Lehrbeauftragter" eSuperTypes="#//Dozent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Professor" eSuperTypes="#//Dozent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Student">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="MatrikelNr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Vorname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Nachname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vorlesung" upperBound="-1"
+        eType="#//Vorlesung" eOpposite="#//Vorlesung/student"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Evaluation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Gesamtnote" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+</ecore:EPackage>

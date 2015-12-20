@@ -1,0 +1,29 @@
+	/*
+ * 
+ */
+package hochschuleemf.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class FachbereichFachbereichStudiengangCompartmentItemSemanticEditPolicy extends hochschuleemf.diagram.edit.policies.HochschuleemfBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public FachbereichFachbereichStudiengangCompartmentItemSemanticEditPolicy() {
+				super(hochschuleemf.diagram.providers.HochschuleemfElementTypes.Fachbereich_2001);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (hochschuleemf.diagram.providers.HochschuleemfElementTypes.Studiengang_3001 == req.getElementType()) {
+	return getGEFWrapper(new hochschuleemf.diagram.edit.commands.StudiengangCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+	}

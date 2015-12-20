@@ -1,0 +1,34 @@
+!SESSION 2015-08-07 00:54:24.853 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product HochschuleViewApplication.product -clearPersistedState
+Command-line arguments:  -product HochschuleViewApplication.product -data /Users/resul/Development/MDD/../runtime-HochschuleViewApplication.product -dev file:/Users/resul/Development/MDD/.metadata/.plugins/org.eclipse.pde.core/HochschuleViewApplication.product/dev.properties -os macosx -ws cocoa -arch x86_64 -consoleLog -clearPersistedState
+
+!ENTRY org.eclipse.equinox.app 0 0 2015-08-07 00:54:25.901
+!MESSAGE Product HochschuleViewApplication.product could not be found.
+
+!ENTRY HochschuleViewApplication 2 0 2015-08-07 00:54:25.930
+!MESSAGE Could not resolve module: HochschuleViewApplication [26]
+  Unresolved requirement: Require-Bundle: Hochschule; bundle-version="0.1.0"
+
+
+!ENTRY org.eclipse.osgi 4 0 2015-08-07 00:54:25.930
+!MESSAGE Application error
+!STACK 1
+java.lang.RuntimeException: No application id has been found.
+	at org.eclipse.equinox.internal.app.EclipseAppContainer.startDefaultApp(EclipseAppContainer.java:242)
+	at org.eclipse.equinox.internal.app.MainApplicationLauncher.run(MainApplicationLauncher.java:29)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)

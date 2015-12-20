@@ -1,0 +1,23 @@
+/*
+ * 
+ */
+package hochschuleemf.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class HochschuleemfModelingAssistantProviderOfHochschuleEditPart extends hochschuleemf.diagram.providers.HochschuleemfModelingAssistantProvider {
+
+				/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForPopupBar(org.eclipse.core.runtime.IAdaptable host) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+					types.add(hochschuleemf.diagram.providers.HochschuleemfElementTypes.Fachbereich_2001);
+					return types;	
+	}
+			
+	
+	}

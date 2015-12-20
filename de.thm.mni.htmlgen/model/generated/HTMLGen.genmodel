@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.thm.mni.htmlgen/src-gen" editDirectory="/de.thm.mni.htmlgen.edit/src"
+    editorDirectory="/de.thm.mni.htmlgen.editor/src" modelPluginID="de.thm.mni.htmlgen"
+    forceOverwrite="true" modelName="HTMLGen" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="de.thm.mni.htmlgen.edit"
+    editorPluginID="de.thm.mni.htmlgen.editor" runtimeVersion="2.11">
+  <genPackages prefix="HTMLGen" basePackage="de.thm.mni.htmlgen" disposableProviderFactory="true"
+      fileExtensions="mydsl1" ecorePackage="HTMLGen.ecore#/">
+    <genClasses ecoreClass="HTMLGen.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HTMLGen.ecore#//Model/model"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HTMLGen.ecore#//Model/form"/>
+    </genClasses>
+    <genClasses ecoreClass="HTMLGen.ecore#//Form">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HTMLGen.ecore#//Form/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HTMLGen.ecore#//Form/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HTMLGen.ecore#//Form/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HTMLGen.ecore#//Form/form"/>
+    </genClasses>
+    <genClasses ecoreClass="HTMLGen.ecore#//Field">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HTMLGen.ecore#//Field/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HTMLGen.ecore#//Field/label"/>
+    </genClasses>
+    <genClasses ecoreClass="HTMLGen.ecore#//TextField"/>
+    <genClasses ecoreClass="HTMLGen.ecore#//MultilineField"/>
+  </genPackages>
+</genmodel:GenModel>

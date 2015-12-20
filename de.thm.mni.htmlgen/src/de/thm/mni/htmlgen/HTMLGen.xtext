@@ -1,0 +1,40 @@
+grammar de.thm.mni.htmlgen.HTMLGen with org.eclipse.xtext.common.Terminals
+
+generate hTMLGen "http://www.thm.de/mni/htmlgen/HTMLGen"
+
+Model:
+"Model" "{"
+	"Form"model+=Form ("," form+=Form)*
+"}"
+;
+
+Form:
+"{" 
+	"Name"name=STRING
+	"Description"description=STRING
+	"Title"title=STRING
+	"Field"form+=Field ("," form+=Field)*
+;
+
+Field:
+"{" 
+	"Name"name=ID
+	"Label"label=STRING
+	| TextField 
+"}"
+;
+
+TextField:
+"TextField" "{" 
+	"Name" name=ID
+	"Label"label=STRING
+	| MultilineField
+"}"
+;
+
+MultilineField: 
+"MultilineField" "{"
+	"Name"name=ID 
+	"Label"label=ID
+"}"
+;

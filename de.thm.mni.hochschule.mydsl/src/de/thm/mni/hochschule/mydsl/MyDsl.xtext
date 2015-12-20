@@ -1,0 +1,81 @@
+grammar de.thm.mni.hochschule.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.thm.de/mni/hochschule/mydsl/MyDsl"
+
+Hochschule:
+"Hochschule" "{"
+	"Name"name=STRING
+	"Student"student+=Student ("," student+=Student)*
+	"Fachbereich"fachbereich+=Fachbereich ("," fachbereich+=Fachbereich)*
+"}"
+;
+	
+Fachbereich: 
+"{"
+	"Name"name=STRING
+	"Alias"alias=STRING
+	"Studiengang"studiengang+=Studiengang ("," studiengang+=Studiengang)*
+	"Dozent"dozent+=Dozent ("," dozent+=Dozent)*
+	("Vorlesung"vorlesung+=[Vorlesung] ("," vorlesung+=[Vorlesung])*)?
+"}"
+;
+
+Studiengang: 
+"{"
+	"Name"name=STRING
+	"NC"nc=STRING
+	"Vorlesung"vorlesung+=Vorlesung ("," vorlesung+=Vorlesung)*
+	"Student"student+=[Student] ("," student+=[Student])*
+"}"
+;
+
+Vorlesung: 
+"{"
+	"Name"name=STRING
+	"ModulNr"modulnr=STRING
+	"Beschreibung"beschreibung=STRING
+	"CrP"crp=STRING
+	"Dozent"dozent=[Dozent]
+	"Student"student+=[Student] ("," student+=[Student])*
+	"Tutor"tutor+=[Student] ("," tutor+=[Student])*
+	"Evaluation"evaluation+=Evaluation ("," evaluation+=Evaluation)*
+"}"
+;
+
+Student: 
+"{"
+	"MatrikelNr"matrikelnr=STRING
+	"Vorname"vorname=STRING
+	"Nachname"nachname=STRING
+	("Vorlesung"vorlesung+=[Vorlesung] ("," vorlesung+=[Vorlesung])*)?
+"}"
+;
+
+Dozent: 
+	"Professor"Professor 
+	| "Lehrbeauftragter"Lehrbeauftrager
+;
+
+Professor: 
+"{"
+"PersonalNr"personalnr=STRING
+	"Vorname"vorname=STRING
+	"Nachname"nachname=STRING
+	"Vorlesung"vorlesung+=[Vorlesung] ("," vorlesung+=[Vorlesung])*
+"}"
+;
+
+Lehrbeauftrager: 
+"{"
+	"PersonalNr"personalnr=STRING
+	"Vorname"vorname=STRING
+	"Nachname"nachname=STRING
+	"Vorlesung"vorlesung+=[Vorlesung] ("," vorlesung+=[Vorlesung])*
+"}"
+;
+
+Evaluation: 
+"{"
+	"Gesamtnote"gesamtnote=INT
+"}"
+;

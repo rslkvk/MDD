@@ -1,0 +1,18 @@
+/*
+ * 
+ */
+package hochschuleemf.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class HochschuleemfBaseEditHelper extends org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase {
+
+		
+		
+	
+	
+	
+	
+	
+	}

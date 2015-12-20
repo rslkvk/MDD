@@ -1,0 +1,176 @@
+/*
+ * 
+ */
+package hochschuleemf.diagram.providers;
+
+/**
+ * @generated
+ */
+public class HochschuleemfElementTypes {
+
+		/**
+ * @generated
+ */
+private HochschuleemfElementTypes() {
+}
+	
+		/**
+ * @generated
+ */
+private static java.util.Map<org.eclipse.gmf.runtime.emf.type.core.IElementType, org.eclipse.emf.ecore.ENamedElement> elements;
+
+	/**
+ * @generated
+ */
+private static org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages elementTypeImages = new org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages(	hochschuleemf.diagram.part.HochschuleemfDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory());
+
+	/**
+ * @generated
+ */
+private static java.util.Set<org.eclipse.gmf.runtime.emf.type.core.IElementType> KNOWN_ELEMENT_TYPES;
+	
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Hochschule_1000 = getElementType("HochschuleEMF.diagram.Hochschule_1000");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Fachbereich_2001 = getElementType("HochschuleEMF.diagram.Fachbereich_2001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Studiengang_3001 = getElementType("HochschuleEMF.diagram.Studiengang_3001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType HochschuleFachbereich_4001 = getElementType("HochschuleEMF.diagram.HochschuleFachbereich_4001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType FachbereichStudiengang_4002 = getElementType("HochschuleEMF.diagram.FachbereichStudiengang_4002");  //$NON-NLS-1$
+		
+		/**
+ * @generated
+ */
+public static org.eclipse.jface.resource.ImageDescriptor getImageDescriptor(org.eclipse.emf.ecore.ENamedElement element) {
+	return elementTypeImages.getImageDescriptor(element);
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.swt.graphics.Image getImage(org.eclipse.emf.ecore.ENamedElement element) {
+	return elementTypeImages.getImage(element);
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.jface.resource.ImageDescriptor getImageDescriptor(org.eclipse.core.runtime.IAdaptable hint) {
+	return getImageDescriptor(getElement(hint));
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.swt.graphics.Image getImage(org.eclipse.core.runtime.IAdaptable hint) {
+	return getImage(getElement(hint));
+}
+
+		/**
+ * Returns 'type' of the ecore object associated with the hint.
+ * 
+ * @generated
+ */
+public static org.eclipse.emf.ecore.ENamedElement getElement(org.eclipse.core.runtime.IAdaptable hint) {
+	Object type = hint.getAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType.class);
+	if (elements == null) {
+		elements = new java.util.IdentityHashMap<org.eclipse.gmf.runtime.emf.type.core.IElementType, org.eclipse.emf.ecore.ENamedElement>();
+		
+	elements.put(Hochschule_1000, hochschuleemf.HochschuleemfPackage.eINSTANCE.getHochschule());
+					
+	
+	elements.put(Fachbereich_2001, hochschuleemf.HochschuleemfPackage.eINSTANCE.getFachbereich());
+					
+	
+	elements.put(Studiengang_3001, hochschuleemf.HochschuleemfPackage.eINSTANCE.getStudiengang());
+							
+	elements.put(HochschuleFachbereich_4001, hochschuleemf.HochschuleemfPackage.eINSTANCE.getHochschule_Fachbereich());
+					
+	elements.put(FachbereichStudiengang_4002, hochschuleemf.HochschuleemfPackage.eINSTANCE.getFachbereich_Studiengang());
+			}
+	return (org.eclipse.emf.ecore.ENamedElement) elements.get(type);
+}
+
+		/**
+ * @generated
+ */
+private static org.eclipse.gmf.runtime.emf.type.core.IElementType getElementType(String id) {
+	return org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry.getInstance().getType(id);
+}
+
+		/**
+ * @generated
+ */
+public static boolean isKnownElementType(org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+	if (KNOWN_ELEMENT_TYPES == null) {
+		KNOWN_ELEMENT_TYPES = new java.util.HashSet<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+			KNOWN_ELEMENT_TYPES.add(Hochschule_1000);
+		KNOWN_ELEMENT_TYPES.add(Fachbereich_2001);
+		KNOWN_ELEMENT_TYPES.add(Studiengang_3001);
+		KNOWN_ELEMENT_TYPES.add(HochschuleFachbereich_4001);
+		KNOWN_ELEMENT_TYPES.add(FachbereichStudiengang_4002);
+		}
+	return KNOWN_ELEMENT_TYPES.contains(elementType);
+}
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gmf.runtime.emf.type.core.IElementType getElementType(int visualID) {
+		switch (visualID) {
+				case hochschuleemf.diagram.edit.parts.HochschuleEditPart.VISUAL_ID:		return Hochschule_1000;
+	case hochschuleemf.diagram.edit.parts.FachbereichEditPart.VISUAL_ID:		return Fachbereich_2001;
+	case hochschuleemf.diagram.edit.parts.StudiengangEditPart.VISUAL_ID:		return Studiengang_3001;
+	case hochschuleemf.diagram.edit.parts.HochschuleFachbereichEditPart.VISUAL_ID:		return HochschuleFachbereich_4001;
+	case hochschuleemf.diagram.edit.parts.FachbereichStudiengangEditPart.VISUAL_ID:		return FachbereichStudiengang_4002;
+		}
+		return null;
+	}
+	
+		/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes TYPED_INSTANCE 
+		= new org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes(elementTypeImages) {
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public boolean isKnownElementType(org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+			return hochschuleemf.diagram.providers.HochschuleemfElementTypes.isKnownElementType(elementType);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public org.eclipse.gmf.runtime.emf.type.core.IElementType getElementTypeForVisualId(int visualID) {
+			return hochschuleemf.diagram.providers.HochschuleemfElementTypes.getElementType(visualID);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public org.eclipse.emf.ecore.ENamedElement getDefiningNamedElement(org.eclipse.core.runtime.IAdaptable elementTypeAdapter) {
+			return hochschuleemf.diagram.providers.HochschuleemfElementTypes.getElement(elementTypeAdapter);
+		}
+	}; 
+
+	}

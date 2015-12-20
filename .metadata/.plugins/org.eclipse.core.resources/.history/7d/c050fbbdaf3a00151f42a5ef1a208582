@@ -1,0 +1,71 @@
+/*
+ * 
+ */
+package hochschuleemf.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class HochschuleemfEditPartFactory implements org.eclipse.gef.EditPartFactory {
+
+		/**
+ * @generated
+ */
+	public org.eclipse.gef.EditPart createEditPart(org.eclipse.gef.EditPart context, Object model) {
+		if (model instanceof org.eclipse.gmf.runtime.notation.View) {
+			org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) model;
+			switch (hochschuleemf.diagram.part.HochschuleemfVisualIDRegistry.getVisualID(view)) {
+				
+	case hochschuleemf.diagram.edit.parts.HochschuleEditPart.VISUAL_ID:
+		return new hochschuleemf.diagram.edit.parts.HochschuleEditPart(view);
+									
+	case hochschuleemf.diagram.edit.parts.FachbereichEditPart.VISUAL_ID:
+		return new hochschuleemf.diagram.edit.parts.FachbereichEditPart(view);
+					
+	case hochschuleemf.diagram.edit.parts.FachbereichNameEditPart.VISUAL_ID:
+		return new hochschuleemf.diagram.edit.parts.FachbereichNameEditPart(view);
+									
+	case hochschuleemf.diagram.edit.parts.StudiengangEditPart.VISUAL_ID:
+		return new hochschuleemf.diagram.edit.parts.StudiengangEditPart(view);
+					
+	case hochschuleemf.diagram.edit.parts.StudiengangNameEditPart.VISUAL_ID:
+		return new hochschuleemf.diagram.edit.parts.StudiengangNameEditPart(view);
+								
+	case hochschuleemf.diagram.edit.parts.FachbereichFachbereichStudiengangCompartmentEditPart.VISUAL_ID:
+		return new hochschuleemf.diagram.edit.parts.FachbereichFachbereichStudiengangCompartmentEditPart(view);
+									
+	case hochschuleemf.diagram.edit.parts.HochschuleFachbereichEditPart.VISUAL_ID:
+		return new hochschuleemf.diagram.edit.parts.HochschuleFachbereichEditPart(view);
+					
+	case hochschuleemf.diagram.edit.parts.WrappingLabelEditPart.VISUAL_ID:
+		return new hochschuleemf.diagram.edit.parts.WrappingLabelEditPart(view);
+
+									
+	case hochschuleemf.diagram.edit.parts.FachbereichStudiengangEditPart.VISUAL_ID:
+		return new hochschuleemf.diagram.edit.parts.FachbereichStudiengangEditPart(view);
+					
+	case hochschuleemf.diagram.edit.parts.WrappingLabel2EditPart.VISUAL_ID:
+		return new hochschuleemf.diagram.edit.parts.WrappingLabel2EditPart(view);
+
+							}
+		}
+		return createUnrecognizedEditPart(context, model);
+	}
+	
+		/**
+ * @generated
+ */
+	 private org.eclipse.gef.EditPart createUnrecognizedEditPart(org.eclipse.gef.EditPart context, Object model) {
+	 	// Handle creation of unrecognized child node EditParts here
+	 	return null;
+	 }
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gef.tools.CellEditorLocator getTextCellEditorLocator(
+			org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart source) {
+		return org.eclipse.gmf.tooling.runtime.directedit.locator.CellEditorLocatorAccess.INSTANCE.getTextCellEditorLocator(source);
+	}
+	
+	}

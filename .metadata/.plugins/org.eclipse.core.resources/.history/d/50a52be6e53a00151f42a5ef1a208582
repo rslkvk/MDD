@@ -1,0 +1,88 @@
+/*
+ * 
+ */
+package hochschuleemf.diagram.providers.assistants;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+
+import hochschuleemf.diagram.edit.parts.FachbereichEditPart;
+import hochschuleemf.diagram.edit.parts.StudiengangEditPart;
+import hochschuleemf.diagram.providers.HochschuleemfElementTypes;
+import hochschuleemf.diagram.providers.HochschuleemfModelingAssistantProvider;
+
+/**
+ * @generated
+ */
+public class HochschuleemfModelingAssistantProviderOfFachbereichEditPart
+		extends HochschuleemfModelingAssistantProvider {
+
+	/**
+	* @generated
+	*/
+	@Override
+
+	public List<IElementType> getRelTypesOnSource(IAdaptable source) {
+		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source.getAdapter(IGraphicalEditPart.class);
+		return doGetRelTypesOnSource((FachbereichEditPart) sourceEditPart);
+	}
+
+	/**
+	* @generated
+	*/
+	public List<IElementType> doGetRelTypesOnSource(FachbereichEditPart source) {
+		List<IElementType> types = new ArrayList<IElementType>(1);
+		types.add(HochschuleemfElementTypes.FachbereichStudiengang_4002);
+		return types;
+	}
+
+	/**
+	* @generated
+	*/
+	@Override
+
+	public List<IElementType> getRelTypesOnSourceAndTarget(IAdaptable source, IAdaptable target) {
+		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source.getAdapter(IGraphicalEditPart.class);
+		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target.getAdapter(IGraphicalEditPart.class);
+		return doGetRelTypesOnSourceAndTarget((FachbereichEditPart) sourceEditPart, targetEditPart);
+	}
+
+	/**
+	* @generated
+	*/
+	public List<IElementType> doGetRelTypesOnSourceAndTarget(FachbereichEditPart source,
+			IGraphicalEditPart targetEditPart) {
+		List<IElementType> types = new LinkedList<IElementType>();
+		if (targetEditPart instanceof StudiengangEditPart) {
+			types.add(HochschuleemfElementTypes.FachbereichStudiengang_4002);
+		}
+		return types;
+	}
+
+	/**
+	* @generated
+	*/
+	@Override
+
+	public List<IElementType> getTypesForTarget(IAdaptable source, IElementType relationshipType) {
+		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source.getAdapter(IGraphicalEditPart.class);
+		return doGetTypesForTarget((FachbereichEditPart) sourceEditPart, relationshipType);
+	}
+
+	/**
+	* @generated
+	*/
+	public List<IElementType> doGetTypesForTarget(FachbereichEditPart source, IElementType relationshipType) {
+		List<IElementType> types = new ArrayList<IElementType>();
+		if (relationshipType == HochschuleemfElementTypes.FachbereichStudiengang_4002) {
+			types.add(HochschuleemfElementTypes.Studiengang_3001);
+		}
+		return types;
+	}
+
+}

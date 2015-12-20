@@ -1,0 +1,263 @@
+	/*
+ * 
+ */
+package hochschuleemf.diagram.part;
+
+	/**
+ * @generated
+ */
+public class HochschuleemfDiagramUpdater {
+		
+	/**
+ * @generated
+ */
+public static boolean isShortcutOrphaned(org.eclipse.gmf.runtime.notation.View view) {
+	return !view.isSetElement() || view.getElement() == null || view.getElement().eIsProxy();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<hochschuleemf.diagram.part.HochschuleemfNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		switch (hochschuleemf.diagram.part.HochschuleemfVisualIDRegistry.getVisualID(view)) {
+		case hochschuleemf.diagram.edit.parts.HochschuleEditPart.VISUAL_ID:
+	return getHochschule_1000SemanticChildren(view);
+case hochschuleemf.diagram.edit.parts.FachbereichFachbereichStudiengangCompartmentEditPart.VISUAL_ID:
+	return getFachbereichFachbereichStudiengangCompartment_7001SemanticChildren(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+public static java.util.List<hochschuleemf.diagram.part.HochschuleemfNodeDescriptor> getHochschule_1000SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (!view.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+hochschuleemf.Hochschule modelElement = (hochschuleemf.Hochschule) view.getElement();
+	java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfNodeDescriptor> result = new java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getFachbereich().iterator(); it.hasNext();) {
+		hochschuleemf.Fachbereich childElement = (hochschuleemf.Fachbereich) it.next();
+					int visualID = hochschuleemf.diagram.part.HochschuleemfVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == hochschuleemf.diagram.edit.parts.FachbereichEditPart.VISUAL_ID) {
+	result.add(new hochschuleemf.diagram.part.HochschuleemfNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<hochschuleemf.diagram.part.HochschuleemfNodeDescriptor> getFachbereichFachbereichStudiengangCompartment_7001SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+hochschuleemf.Fachbereich modelElement = (hochschuleemf.Fachbereich) containerView.getElement();
+	java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfNodeDescriptor> result = new java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getStudiengang().iterator(); it.hasNext();) {
+		hochschuleemf.Studiengang childElement = (hochschuleemf.Studiengang) it.next();
+					int visualID = hochschuleemf.diagram.part.HochschuleemfVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == hochschuleemf.diagram.edit.parts.StudiengangEditPart.VISUAL_ID) {
+	result.add(new hochschuleemf.diagram.part.HochschuleemfNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (hochschuleemf.diagram.part.HochschuleemfVisualIDRegistry.getVisualID(view)) {
+		case hochschuleemf.diagram.edit.parts.HochschuleEditPart.VISUAL_ID:
+	return getHochschule_1000ContainedLinks(view);
+case hochschuleemf.diagram.edit.parts.FachbereichEditPart.VISUAL_ID:
+	return getFachbereich_2001ContainedLinks(view);
+case hochschuleemf.diagram.edit.parts.StudiengangEditPart.VISUAL_ID:
+	return getStudiengang_3001ContainedLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (hochschuleemf.diagram.part.HochschuleemfVisualIDRegistry.getVisualID(view)) {
+		case hochschuleemf.diagram.edit.parts.FachbereichEditPart.VISUAL_ID:
+	return getFachbereich_2001IncomingLinks(view);
+case hochschuleemf.diagram.edit.parts.StudiengangEditPart.VISUAL_ID:
+	return getStudiengang_3001IncomingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (hochschuleemf.diagram.part.HochschuleemfVisualIDRegistry.getVisualID(view)) {
+		case hochschuleemf.diagram.edit.parts.FachbereichEditPart.VISUAL_ID:
+	return getFachbereich_2001OutgoingLinks(view);
+case hochschuleemf.diagram.edit.parts.StudiengangEditPart.VISUAL_ID:
+	return getStudiengang_3001OutgoingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getHochschule_1000ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	hochschuleemf.Hochschule modelElement = (hochschuleemf.Hochschule) view.getElement();
+		java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> result = new java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Hochschule_Fachbereich_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getFachbereich_2001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	hochschuleemf.Fachbereich modelElement = (hochschuleemf.Fachbereich) view.getElement();
+		java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> result = new java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Fachbereich_Studiengang_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getStudiengang_3001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getFachbereich_2001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	hochschuleemf.Fachbereich modelElement = (hochschuleemf.Fachbereich) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> result = new java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Hochschule_Fachbereich_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getStudiengang_3001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	hochschuleemf.Studiengang modelElement = (hochschuleemf.Studiengang) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> result = new java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Fachbereich_Studiengang_4002(modelElement, crossReferences));	
+	return result;
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getFachbereich_2001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	hochschuleemf.Fachbereich modelElement = (hochschuleemf.Fachbereich) view.getElement();
+		java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> result = new java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Fachbereich_Studiengang_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getStudiengang_3001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+private static java.util.Collection<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getIncomingFeatureModelFacetLinks_Hochschule_Fachbereich_4001(hochschuleemf.Fachbereich target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> result = new java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == hochschuleemf.HochschuleemfPackage.eINSTANCE.getHochschule_Fachbereich()) {
+	result.add(new hochschuleemf.diagram.part.HochschuleemfLinkDescriptor(setting.getEObject(), target, hochschuleemf.diagram.providers.HochschuleemfElementTypes.HochschuleFachbereich_4001, hochschuleemf.diagram.edit.parts.HochschuleFachbereichEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getIncomingFeatureModelFacetLinks_Fachbereich_Studiengang_4002(hochschuleemf.Studiengang target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> result = new java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == hochschuleemf.HochschuleemfPackage.eINSTANCE.getFachbereich_Studiengang()) {
+	result.add(new hochschuleemf.diagram.part.HochschuleemfLinkDescriptor(setting.getEObject(), target, hochschuleemf.diagram.providers.HochschuleemfElementTypes.FachbereichStudiengang_4002, hochschuleemf.diagram.edit.parts.FachbereichStudiengangEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+		
+	/**
+ * @generated
+ */
+private static java.util.Collection<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getOutgoingFeatureModelFacetLinks_Fachbereich_Studiengang_4002(hochschuleemf.Fachbereich source) {
+	java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> result = new java.util.LinkedList<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor>();
+		for (java.util.Iterator<?> destinations = source.getStudiengang().iterator(); destinations.hasNext();) {
+		hochschuleemf.Studiengang destination = (hochschuleemf.Studiengang) destinations.next();
+		result.add(new hochschuleemf.diagram.part.HochschuleemfLinkDescriptor(source, destination, hochschuleemf.diagram.providers.HochschuleemfElementTypes.FachbereichStudiengang_4002, hochschuleemf.diagram.edit.parts.FachbereichStudiengangEditPart.VISUAL_ID));
+		}
+		return result;
+}
+	
+					/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.update.DiagramUpdater TYPED_INSTANCE = new org.eclipse.gmf.tooling.runtime.update.DiagramUpdater() {
+				/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<hochschuleemf.diagram.part.HochschuleemfNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+			return HochschuleemfDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return HochschuleemfDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return HochschuleemfDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<hochschuleemf.diagram.part.HochschuleemfLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return HochschuleemfDiagramUpdater.getOutgoingLinks(view);
+		}
+	}; 
+			
+	}

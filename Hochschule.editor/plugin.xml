@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated hochschule -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="hochschule.presentation.HochschuleModelWizardID"
+            name="%_UI_HochschuleModelWizard_label"
+            class="hochschule.presentation.HochschuleModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/HochschuleModelFile.gif">
+         <description>%_UI_HochschuleModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated hochschule -->
+      <editor
+            id="hochschule.presentation.HochschuleEditorID"
+            name="%_UI_HochschuleEditor_label"
+            icon="icons/full/obj16/HochschuleModelFile.gif"
+            extensions="hochschule"
+            class="hochschule.presentation.HochschuleEditor"
+            contributorClass="hochschule.presentation.HochschuleActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

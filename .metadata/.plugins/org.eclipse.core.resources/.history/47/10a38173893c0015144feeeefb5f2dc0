@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+<extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated hochschuleViewModel -->
+      <!-- <package
+            uri="http://www.example.org/hochschule"
+            class="hochschule.HochschuleViewModelPackage"
+            genModel="model/hochschuleViewModel.genmodel"/>
+   </extension>
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated hochschuleViewModel -->
+      <package
+            uri="http://www.example.org/hochschule"
+            class="hochschule.HochschuleViewModelPackage"
+            genModel="model/hochschuleViewModel.genmodel"/>
+   </extension>
+
+</plugin>
